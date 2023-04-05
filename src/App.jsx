@@ -1,13 +1,14 @@
 import user from 'data/user';
-// import statistics from 'data/statistics';
+import data from 'data/data';
 // import friends from 'data/friends';
 // import transactions from 'data/transactions';
 import Profile from 'components/Profile/Profile';
+import Statistics from 'components/Statistics/Statistics';
 // import style from './App.module.scss';
 
 export const App = () => {
   return (
-    <div className={style.main}>
+    <div>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -15,6 +16,7 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      </div>
+      <Statistics title="Upload stats" stats={data}/>
+    </div>
   );
 };

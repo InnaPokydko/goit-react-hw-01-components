@@ -1,19 +1,19 @@
 import PropTypes from 'prop-types';
-import style from "./Profile.css";
+// import style from "./Profile.css";
 
 const Profile = props => {
     const { username, tag, location, avatar, stats } = props;
     return (
-      <div className={style.profile}>
-        <div className={style.description}>
-          <div className={style['avatar-wrapper']}>
-            <img src={avatar} alt="User avatar" className={style.avatar} />
+      <div>
+        <div>
+          <div>
+            <img src={avatar} alt="User avatar" />
           </div>
-          <h2 className={style.name}>{username}</h2>
-          <a className={style.tag} href={`/${tag}`}>
+          <h2>{username}</h2>
+          <a  href={`/${tag}`}>
             @{tag}
           </a>
-          <p className={style.location}>{location}</p>
+          <p>{location}</p>
         </div>
         <ul>
           <li>
