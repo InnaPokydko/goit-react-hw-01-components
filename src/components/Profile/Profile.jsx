@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import style from './Profile.module.scss';
+import style from "./Profile.css";
 
 const Profile = props => {
     const { username, tag, location, avatar, stats } = props;
@@ -15,18 +15,18 @@ const Profile = props => {
           </a>
           <p className={style.location}>{location}</p>
         </div>
-        <ul className={style.stats}>
+        <ul>
           <li>
-            <span className={style.label}>Followers</span>
-            <span className={style.quantity}>{stats.followers}</span>
+            <span>Followers</span>
+            <span>{stats.followers}</span>
           </li>
           <li>
-            <span className={style.label}>Views</span>
-            <span className={style.quantity}>{stats.views}</span>
+            <span>Views</span>
+            <span>{stats.views}</span>
           </li>
           <li>
-            <span className={style.label}>Likes</span>
-            <span className={style.quantity}>{stats.likes}</span>
+            <span>Likes</span>
+            <span>{stats.likes}</span>
           </li>
         </ul>
       </div>

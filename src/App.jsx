@@ -3,7 +3,7 @@ import user from 'data/user';
 // import friends from 'data/friends';
 // import transactions from 'data/transactions';
 import Profile from 'components/Profile/Profile';
-import style from './App.module.scss';
+// import style from './App.module.scss';
 
 export const App = () => {
   return (
