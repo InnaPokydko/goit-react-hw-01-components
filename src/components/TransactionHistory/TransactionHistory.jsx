@@ -1,24 +1,32 @@
 import PropTypes from 'prop-types';
 
 const TransactionHistory = props => {
-  const { transactions } = props;
+  const { items } = props;
   return (
-    <ul>
-      {transactions.map(transaction => (
-       <li
-       key={transaction.id}
-       type={transaction.type}
-       amount={transaction.amount}
-          currency={transaction.currency}
-     >
-           </li>
-      ))}
-      </ul>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Currency</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {items.map(item => (
+          <tr key={item.id}>
+            <td>{item.type}</td>
+            <td>{item.amount}</td>
+            <td>{item.currency}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 
 TransactionHistory.propTypes = {
-    items: PropTypes.arrayOf(
+  items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       type: PropTypes.string.isRequired,
