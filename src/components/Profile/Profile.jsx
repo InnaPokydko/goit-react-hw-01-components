@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-// import style from "./Profile.css";
+import { Card, ImgAvatar, Stats} from './Profile.styled';
 
 const Profile = props => {
     const { username, tag, location, avatar, stats } = props;
     return (
-      <div>
+      <Card>
         <div>
           <div>
-            <img src={avatar} alt="User avatar" />
+            <ImgAvatar src={avatar} alt="User avatar" />
           </div>
           <h2>{username}</h2>
           <a  href={`/${tag}`}>
@@ -15,7 +15,7 @@ const Profile = props => {
           </a>
           <p>{location}</p>
         </div>
-        <ul>
+        <Stats>
           <li>
             <span>Followers</span>
             <span>{stats.followers}</span>
@@ -28,8 +28,8 @@ const Profile = props => {
             <span>Likes</span>
             <span>{stats.likes}</span>
           </li>
-        </ul>
-      </div>
+        </Stats>
+      </Card>
     );
   };
 

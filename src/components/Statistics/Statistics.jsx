@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import { StatBox, StatEvent } from './Statistics.styled';
 
 const Statistics = props => {
   const { title, stats } = props;
   return (
-    <section>
+    <StatBox>
       {title && <h2>{title}</h2>}
-      <ul>
+      <StatEvent>
         {stats.map(statistic => (
           <li
             key={statistic.id}
@@ -15,8 +16,8 @@ const Statistics = props => {
             <span>{statistic.percentage}%</span>
           </li>
         ))}
-      </ul>
-    </section>
+      </StatEvent>
+    </StatBox>
   );
 };
 
