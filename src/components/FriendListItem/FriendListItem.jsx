@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types';
+import { FriendCard } from './FriendListItem.styled';
 
 const FriendListItem = props => {
   const { avatar, name, isOnline } = props;
   const backgroundColor = isOnline ? 'green' : 'red';
   return (
-    <li>
+    <FriendCard>
       <span
         style={{ backgroundColor: backgroundColor }}
       ></span>
       <img src={avatar} alt="User avatar" width="48" />
       <p>{name}</p>
-    </li>
+    </FriendCard>
   );
 };
 

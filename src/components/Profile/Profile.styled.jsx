@@ -4,7 +4,7 @@ export const Card = styled.div`
 width: 300px;
     max-width: 100%;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #fdfbfb;
     border-radius: 5px;
     box-shadow: 0px 2px 5px -1px rgb(0 0 0 / 0.1);
     text-align: center;`
@@ -14,7 +14,7 @@ width: 300px;
     overflow: hidden;
     width: 200px;
        margin: 0 auto;
-    background-color: yellowgreen;
+    background-color: #a1c4fd;
     margin-bottom: 30px;`
 
     export const Stats = styled.ul`

@@ -7,4 +7,5 @@ display: flex;
   align-items: center;
   gap: 60px;
   padding: 50px;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 `

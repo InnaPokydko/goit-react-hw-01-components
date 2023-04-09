@@ -5,7 +5,7 @@ const Statistics = props => {
   const { title, stats } = props;
   return (
     <StatBox>
-      {title && <h2>{title}</h2>}
+      <h2>{title}</h2>
       <StatEvent>
         {stats.map(statistic => (
           <li
