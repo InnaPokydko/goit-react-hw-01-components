@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { TransHisTable,  TransHisTrTitle, TransHisTr} from './TransactionHistory.styled';
+import { TransHisTable,  TransHisTrTitle, TransHisTr, TransHisTd} from './TransactionHistory.styled';
 
 const TransactionHistory = props => {
   const { items } = props;
@@ -16,9 +16,9 @@ const TransactionHistory = props => {
       <tbody>
         {items.map(item => (
           <TransHisTr key={item.id}>
-            <td>{item.type}</td>
-            <td>{item.amount}</td>
-            <td>{item.currency}</td>
+            <TransHisTd>{item.type}</TransHisTd>
+            <TransHisTd>{item.amount}</TransHisTd>
+            <TransHisTd>{item.currency}</TransHisTd>
           </TransHisTr>
         ))}
       </tbody>
@@ -33,7 +33,7 @@ TransactionHistory.propTypes = {
       type: PropTypes.string.isRequired,
       amount: PropTypes.number.isRequired,
       currency: PropTypes.string.isRequired,
-    })
+    }).isRequired,
   ).isRequired,
 };
 
